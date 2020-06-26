@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+.container {
+  width: 86%;
+  margin: 0 auto;
+}
+h3 {
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 50px;
+}
+h4 {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 41px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  color: #011D21;
+}
+header .top {
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  height: 77px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 15px;
+}
+header .top .container {
+  display: flex;
+  justify-content: space-between;
+}
+header .top .container ul li {
+  display: inline;
+  line-height: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+header .top .container ul li a {
+  color: #101211;
+  opacity: 0.7;
+  padding-right: 30px;
+}
+header .top .container ul li a:hover {
+  opacity: 1;
+}
+main .slider-top {
+  width: 100%;
+}
+main .slider-top .contant {
+  width: 100%;
+  height: 855px;
+  background-image: url('../images/main_page/fon-header.jpg');
+  background-position: center;
+  background-size: cover;
+  padding-top: 144px;
+}
+main .slider-top .contant .sell {
+  width: 545px;
+  height: 607px;
+  border: 1px solid rgba(223, 187, 201, 0.5);
+  box-shadow: 0px 0px 4px rgba(131, 106, 131, 0.39);
+  padding: 60px;
+  color: #0F6489;
+  position: relative;
+}
+main .slider-top .contant .sell .top {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 45px;
+  font-weight: 400;
+  color: #6B5C93;
+}
+main .slider-top .contant .sell img {
+  padding: 50px 70px;
+}
+main .slider-top .contant .sell .discount {
+  font-size: 40px;
+  font-weight: 500;
+}
+main .slider-top .contant .sell span {
+  font-size: 30px;
+}
+main .slider-top .contant .sell:before {
+  content: '';
+  position: absolute;
+  background-image: url('../images/main_page/flover-sell1.png');
+  width: 145px;
+  height: 334px;
+  top: 0;
+  left: 0;
+}
+main .slider-top .contant .sell:after {
+  content: '';
+  position: absolute;
+  background-image: url('../images/main_page/flover-sell2.png');
+  width: 191px;
+  height: 342px;
+  bottom: 0;
+  right: -44px;
+}
+main .slider-top .slick-dots {
+  bottom: 30px;
+}
+main .slider-top .slick-dots li button:before {
+  font-size: 13px;
+}
+main .slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+main .catalog {
+  padding: 70px 0 70px 0;
+  text-align: center;
+}
+main .catalog h2 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 49px;
+  text-transform: uppercase;
+  padding-bottom: 50px;
+}
+main .catalog .contant .card {
+  display: inline-block;
+  width: 255px;
+  margin: 15px;
+}
+main .catalog .contant .card img {
+  margin-bottom: 20px;
+}
+main .catalog .contant .card a {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+  color: #064032;
+}
+main .info {
+  padding-bottom: 70px;
+}
+main .info .card {
+  width: max-content;
+}
+main .info .card img {
+  margin-bottom: 20px;
+}
+main .info .card .top {
+  display: flex;
+  justify-content: space-between;
+}
+main .info .card .top .name {
+  width: 280px;
+  height: 60px;
+}
+main .info .card .top .name a {
+  font-size: 24px;
+  line-height: 29px;
+  color: #101211;
+  font-weight: 500;
+}
+main .info .card .top .size {
+  font-size: 20px;
+  line-height: 24px;
+  color: #79B4C9;
+}
+main .info .card .price .old_price {
+  display: inline;
+  font-size: 20px;
+  line-height: 24px;
+  color: #848C94;
+  position: relative;
+  margin-right: 20px;
+}
+main .info .card .price .old_price::before {
+  content: '';
+  border-top: 1px solid #848C94;
+  transform: rotate(-10deg);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+main .info .card .price .new_price {
+  display: inline;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 32px;
+  color: #00B881;
+}
+main .info .slick-prev:before,
+main .info .slick-next:before {
+  color: red;
+}
+main .about_us {
+  padding-bottom: 100px;
+}
+main .about_us .container {
+  text-align: center;
+  color: #011D21;
+}
+main .about_us .container .contant {
+  width: 60%;
+  margin: 0 auto;
+}
+main .about_us .container .contant p {
+  font-size: 18px;
+  line-height: 150%;
+  padding-bottom: 20px;
+}
+main .about_us .container .contant a {
+  display: block;
+  width: 242px;
+  height: 57px;
+  color: #6B5C93;
+  font-size: 20px;
+  line-height: 50px;
+  border: 1px solid #6B5C93;
+  border-radius: 7px;
+  margin: 0 auto;
+}
