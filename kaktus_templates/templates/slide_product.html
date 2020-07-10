@@ -1,0 +1,21 @@
+{% load i18n %}
+
+<div class="card">
+    <a href="#">
+        {% for p in item.images %}
+        <img src="{{ p.path.url }}" style="width: 300px; height: 285px;">
+        {% endfor %}
+    </a>
+    <div class="top">
+        <div class="name"><a href="#">{{item.name}}</a></div>
+        <div class="size">4 см</div>
+    </div>
+    <div class="price">
+        <div class="old_price">
+            {% if item.old_price > 0 %}
+            {{item.old_price}}
+            {% endif %}
+        </div>
+        <div class="new_price">{{item.price}}</div>
+    </div>
+</div>

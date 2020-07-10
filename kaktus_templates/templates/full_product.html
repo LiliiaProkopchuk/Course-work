@@ -1,0 +1,18 @@
+{% load i18n %}
+{{item.name}}
+{{item.price}}
+{% if item.old_price > 0 %}
+    {{item.old_price}}
+{% endif %}
+{{item.description}}
+{{item.short_decription}}
+{{item.category.name}}
+{% if item.available %}
+{% trans "Есть в наличии"%}
+{% else %}
+{% trans "Есть в наличии"%}
+{% endif %}
+{% for p in item.images %}
+<img src="{{ p.path.url }}">
+{% endfor %}
+<hr>

@@ -1,0 +1,30 @@
+{% load i18n %}
+{% load static %}
+
+<div class="catalog">
+    <div class="container">
+        <h2>Каталог</h2>
+        <ul class="contant list">
+            {% for cat in catlist %}
+            <li class="card">
+                <a href="{% url 'one_category' id_category=cat.pk %}">
+                    <img src="{% static 'assets/images/main_page/catalog_1.jpg' %}" alt="Flover">
+                </a>
+                <a href="{% url 'one_category' id_category=cat.pk %}" class="link">
+                    {{ cat.name }}
+                </a>
+                {% if cat.has_child %}
+                {% for cat in cat.child %}
+                <span class="arrow"></span>
+                <ul class="sub_list">
+                    <li class="sub_card">
+                        <a href="{% url 'one_category' id_category=cat.pk %}" class="sub_link">{{ cat.name }}</a>
+                    </li>
+                </ul>
+                {% endfor %}
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
