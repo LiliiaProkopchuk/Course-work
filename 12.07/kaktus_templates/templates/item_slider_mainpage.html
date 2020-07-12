@@ -1,0 +1,18 @@
+<div class="card">
+    
+        {% if product.first_image %}
+            <a href="{% url 'one_product' pk=product.pk %}">
+        <img src="{{ product.first_image.path.url  }}" alt="{{ product.name }}"></a>
+        {% endif %} 
+        
+    <div class="top">
+        <div class="name"><a href="{% url 'one_product' pk=product.pk %}">{{ product.name }}</a></div>
+{#        <div class="size">4 см</div>#}
+    </div>
+    <div class="price">
+        {% if product.old_price > 0 %}
+        <div class="old_price">{{ product.old_price }}грн</div>
+        {% endif %}
+        <div class="new_price">{{ product.price }}грн</div>
+    </div>
+</div>
