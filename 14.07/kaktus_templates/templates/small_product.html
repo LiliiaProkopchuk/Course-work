@@ -1,0 +1,52 @@
+{% load i18n %}
+
+<div class="unit">
+    <div class="image">
+        {% for p in item.images %}
+        <img src="{{ p.path.url }}" style="width: 300px; height: 285px;">
+        {% endfor %}
+    </div>
+    <div class="text">
+        <span>
+            {% if item.available %}
+            {% trans "Есть в наличии"%}
+            {% else %}
+            {% trans "Сейчас нет в наличии"%}
+            {% endif %}
+        </span>
+        <h2>{{item.name}}</h2>
+        <div class="price">
+            <div class="old_price">{{item.price}} грн</div>
+            <div class="new_price">
+                {% if item.old_price > 0 %}
+                {{item.old_price}}
+                {% endif %}
+                грн</div>
+        </div>
+        <div class="description">
+            <h3>Краткое описание</h3>
+            <p>{{item.short_decription}}</p>
+        </div>
+    </div>
+</div>
+
+
+<!--
+    {{item.name}}
+{{item.price}}
+{% if item.old_price > 0 %}
+{{item.old_price}}
+{% endif %}
+{{item.description}}
+{{item.short_decription}}
+{{item.category.name}}
+{% if item.available %}
+{% trans "Есть в наличии"%}
+{% else %}
+{% trans "Есть в наличии"%}
+{% endif %}
+{% for p in item.images %}
+<img src="{{ p.path.url }}" style="width: 300px; height: 285px;">
+{% endfor %}
+<hr>
+-->

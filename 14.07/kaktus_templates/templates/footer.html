@@ -1,0 +1,44 @@
+{% load i18n %}
+{% load static %}
+
+<footer>
+    <div class="container">
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="{% url 'deliv_pay' %}">Доставка и оплата</a></li>
+                    <li><a href="{% url 'about_us' %}">Про нас</a></li>
+                    <li><a href="{% url 'contact'  %}">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="links">
+            <a href="{% url 'index'  %}"><img src="{% static 'assets/images/main_page/logo_footer.svg' %}"
+                    alt="Logo"></a>
+            <ul>
+                <li><a href="https://{{FACEBOOK}}" target="_blank"><img
+                            src="{% static 'assets/images/main_page/facebook_icon.svg' %}" alt="Facebook"></a></li>
+                <li><a href="https://{{ INSTAGRAM }}" target="_blank"><img
+                            src="{% static 'assets/images/main_page/instagram_icon.svg' %}" alt="Instagram"></a></li>
+                <li><a href="https://{{ PINTEREST }}" target="_blank"><img
+                            src="{% static 'assets/images/main_page/pinterest_icon.svg' %}" alt="Pinterest"></a></li>
+                <li><a href="mailto:{{ EMAIL }}" target="_blank"><img
+                            src="{% static 'assets/images/main_page/mail_icon.svg' %}" alt="Gmail"></a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <div class="phone">
+                <div class="image"><img src="{% static 'assets/images/main_page/phone.png' %}" alt="Phone"></div>
+                <div class="numbers">
+                    <ul>
+                        <li><a href="tel:{{ PRIMARY_PHONE }}">{{ PRIMARY_PHONE }}</a></li>
+                        {% if SECOND_PHONE  %}
+                        <li><a href="tel:{{SECOND_PHONE}}">{{SECOND_PHONE}}</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright"><span>&copy; Все права защищены, 2020</span></div>
+        </div>
+    </div>
+</footer>
