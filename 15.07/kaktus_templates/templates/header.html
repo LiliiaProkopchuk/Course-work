@@ -1,0 +1,28 @@
+{% load i18n %}
+{% load static %}
+
+<header class="js-header">
+    <div class="container">
+        <div class="header_burger">
+            <span></span>
+        </div>
+        <nav class="header_menu">
+            <ul class="header_list">
+                <li><a href="{% url 'deliv_pay' %}" class="header_link nav_link">Доставка и оплата</a></li>
+                <li><a href="{% url 'about_us' %}" class="header_link nav_link">Про нас</a></li>
+                <li><a href="{% url 'contact'  %}" class="header_link nav_link">Контакты</a></li>
+            </ul>
+        </nav>
+        <a href="{% url 'index' %}" class="logo"><img src="{% static 'assets/images/main_page/logo.svg' %}" alt="logo"
+                class="logo"></a>
+        <div class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="{% url 'deliv_pay' %}">Доставка и оплата</a></li>
+                    <li><a href="{% url 'about_us' %}">Про нас</a></li>
+                    <li><a href="{% url 'contact'  %}">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
