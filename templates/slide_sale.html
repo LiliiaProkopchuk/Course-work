@@ -1,0 +1,20 @@
+{% load i18n %}
+{% load static %}
+{% if item.price < item.old_price %}
+<a href="{% url 'one_product' pk=item.pk %}">
+                <div class="contant">
+                    <div class="container">
+                        <div class="sell">
+                            <div class="top">Распродажа</div>
+{#                            
+                            {% for p in item.images %}
+{#                                style="width: 500px; height: 485px"#}
+                            <img src="{{ p.path.url }}"  alt="Discount">
+                            {% endfor %}
+
+                            <div class="discount">Скидка {{ item.sale }}% {{ item.name }} </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+{% endif %}

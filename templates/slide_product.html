@@ -1,0 +1,36 @@
+{% load i18n %}
+
+<div class="card">
+
+
+    <a href="{% url 'one_product' pk=item.pk %}">
+        {% for p in item.images %}
+        <img src="{{ p.path.url }}">
+        {% endfor %}
+
+    </a>
+
+    <div class="top">
+
+        <div class="name">
+
+            <a href="{% url 'one_product' pk=item.pk %}">{{item.name}}</a></div>
+
+
+    </div>
+
+    <div class="price">
+        <div class="old_price">
+            {% if item.old_price > 0 %}
+            {{item.old_price}}
+            {% endif %}
+        </div>
+        <div class="new_price">{{item.price}}</div>
+    </div>
+
+
+</div>
+
+{#            {% for prod in productlist %}#}
+{#            {% url 'one_product' pk=prod.pk %}#}
+{#            {% endfor %}#}
